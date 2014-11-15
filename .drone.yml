@@ -11,6 +11,7 @@ script:
 
 services:
     - mysql
+    - redis
 
 notify:
     email:
