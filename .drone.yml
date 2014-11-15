@@ -6,12 +6,12 @@ env:
     - PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 script:
+    - go build
     - go test
 
-#services:
-#    - postgres
-#    - mysql
-#
+services:
+    - mysql
+
 notify:
     email:
         recipients:
