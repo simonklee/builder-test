@@ -1,0 +1,30 @@
+image: go1.3
+git:
+    path: github.com/simonz05/builder-test
+env:
+    - GOROOT=/usr/local/go
+    - PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+script:
+    - go test
+
+#services:
+#    - postgres
+#    - mysql
+#
+notify:
+    email:
+        recipients:
+            - simon@insmo.com
+#publish:
+#  s3:
+#    acl: public-read
+#    region: us-east-1
+#    bucket: downloads.drone.io
+#    access_key: $$AWS_KEY
+#    secret_key: $$AWS_SECRET
+#    source: packaging/output/
+#    target: $DRONE_BRANCH/
+#    recursive: true
+#    when:
+#      owner: drone
