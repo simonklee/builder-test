@@ -1,3 +1,3 @@
 package lib
 
-const Hello = "Hello World"
+const Hello = "Hello Branching"
